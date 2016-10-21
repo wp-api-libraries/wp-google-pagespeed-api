@@ -52,8 +52,6 @@ if ( ! class_exists( 'GooglePageSpeedAPI' ) ) {
 		 */
 		private function fetch( $request ) {
 
-			$request . = '?key=' . static::$api_key;
-
 			$response = wp_remote_get( $request );
 			$code = wp_remote_retrieve_response_code( $response );
 
@@ -80,13 +78,13 @@ if ( ! class_exists( 'GooglePageSpeedAPI' ) ) {
 		 * @param mixed $strategy
 		 * @return void
 		 */
-		public function run_pagespeed( $url, $filter_third_party_resources, $locale, $rule, $screenshot, $strategy ) {
+		public function run_pagespeed(  $url, $filter_third_party_resources = '', $locale = '', $rule = '', $screenshot = '', $strategy = '' ) {
 
 			if ( empty( $url ) ) {
 				return new WP_Error( 'required-fields', __( 'Required fields are empty.', 'text-domain' ) );
 			}
 
-			$request = $this->base_uri . '?url=' . $url;
+			$request = $this->base_uri . '?url=' . $url . '&key=' . static::$api_key;
 
 			return $this->fetch( $request );
 
