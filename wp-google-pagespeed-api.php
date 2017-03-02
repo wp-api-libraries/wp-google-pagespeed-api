@@ -75,8 +75,7 @@ if ( ! class_exists( 'GooglePageSpeedAPI' ) ) {
 			return json_decode( $body );
 
 		}
-
-
+		
 		/**
 		 * Perform PageSpeed.
 		 *
