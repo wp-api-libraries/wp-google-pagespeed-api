@@ -9,9 +9,9 @@
 * Plugin Name: WP Google PageSpeed API
 * Plugin URI: https://github.com/wp-api-libraries/wp-google-pagespeed-api
 * Description: Perform API requests to Google Page Speed in WordPress.
-* Author: imFORZA
+* Author: WP API Libraries
 * Version: 1.0.0
-* Author URI: https://www.imforza.com
+* Author URI: https://wp-api-libraries.com/
 * GitHub Plugin URI: https://github.com/wp-api-libraries/wp-google-pagespeed-api
 * GitHub Branch: master
 */
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 if ( ! class_exists( 'GooglePageSpeedAPI' ) ) {
 
 	/**
-	 * CodeClimateAPI class.
+	 * GooglePageSpeedAPI class.
 	 */
 	class GooglePageSpeedAPI {
 
@@ -81,13 +81,13 @@ if ( ! class_exists( 'GooglePageSpeedAPI' ) ) {
 		 * Perform PageSpeed.
 		 *
 		 * @access public
-		 * @param mixed $url
-		 * @param mixed $filter_third_party_resources
-		 * @param mixed $locale
-		 * @param mixed $rule
-		 * @param mixed $screenshot
-		 * @param mixed $strategy
-		 * @return void
+		 * @param mixed $url URL.
+		 * @param mixed $filter_third_party_resources Filter Third Party Resources.
+		 * @param mixed $locale Locale.
+		 * @param mixed $rule Rule.
+		 * @param mixed $screenshot Screenshot.
+		 * @param mixed $strategy Strategy. 
+		 * @return mixed PageSpeed Results.
 		 */
 		public function run_pagespeed(  $url, $filter_third_party_resources = '', $locale = '', $rule = '', $screenshot = '', $strategy = '' ) {
 
