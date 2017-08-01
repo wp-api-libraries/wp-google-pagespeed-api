@@ -1,1 +1,9 @@
-vendor/*
+.DS_Store
+Thumbs.db
+gulpconf.js
+
+*.codekit
+.codekit-cache
+/node_modules/
+/vendor/
+/dist/
