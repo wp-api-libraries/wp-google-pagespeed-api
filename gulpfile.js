@@ -5,15 +5,15 @@
  */
 
 var gulp      = require( 'gulp' ),
-	minify    = require( 'gulp-minify' ),
-	watch     = require( 'gulp-watch' ),
-	cleanCSS  = require( 'gulp-clean-css' ),
-	rename    = require( 'gulp-rename' ),
-	postcss   = require( 'gulp-postcss' ),
-	sass      = require( 'gulp-sass' ),
-	zip       = require( 'gulp-zip' ),
-	autoprefixer = require( 'autoprefixer' ),
-	browserSync  = require( 'browser-sync' ).create(),
+	  minify    = require( 'gulp-minify' ),
+	  watch     = require( 'gulp-watch' ),
+	  cleanCSS  = require( 'gulp-clean-css' ),
+	  rename    = require( 'gulp-rename' ),
+	  postcss   = require( 'gulp-postcss' ),
+	  sass      = require( 'gulp-sass' ),
+	  zip       = require( 'gulp-zip' ),
+	  autoprefixer = require( 'autoprefixer' ),
+	  browserSync  = require( 'browser-sync' ).create(),
 		sourcemaps   = require( 'gulp-sourcemaps' ),
 		imagemin 		 = require( 'gulp-imagemin' );
 
@@ -26,8 +26,8 @@ var BASE_NAME = __dirname.match( /([^\/]*)\/*$/ )[1];
 
 // JS source, destination, and excludes.
 var JS_EXCLD  = '!assets/js/*.min.js',
-	JS_SRC    = 'assets/js/*.js',
-	JS_DEST   = 'assets/js/';
+	  JS_SRC    = 'assets/js/*.js',
+	  JS_DEST   = 'assets/js/';
 
 // CSS and SASS src, dest, and exclude.
 var CSS_SRC   = 'assets/css/*.css',

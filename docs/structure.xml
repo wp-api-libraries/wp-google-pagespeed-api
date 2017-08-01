@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project title="WP Google PageSpeed API" version="2.8.5">
+  <partials/>
+  <file path="wp-google-pagespeed-api.php" generated-path="wp-google-pagespeed-api.html" hash="3cbcdc3c55d1be8cc0ea0a64fb826b55" package="WP-API-Libraries\WP-Google-PageSpeed-API">
+    <docblock line="0">
+      <description>WP Google PageSpeed API</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="WP-API-Libraries\WP-Google-PageSpeed-API"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="" line="33" package="WP-API-Libraries\WP-Google-PageSpeed-API">
+      <extends/>
+      <name>GooglePageSpeedAPI</name>
+      <full_name>\GooglePageSpeedAPI</full_name>
+      <docblock line="33">
+        <description>A WordPress API library for using the Google PageSpeed API.</description>
+        <long-description></long-description>
+        <tag name="link" line="33" description="Documentation" link="https://developers.google.com/speed/docs/insights/v2/reference/"/>
+        <tag name="see" line="33" description="WP API Libraries" link="https://wp-api-libraries.com/"/>
+        <tag name="package" line="33" description="WP-API-Libraries\WP-Google-PageSpeed-API"/>
+        <tag name="author" line="33" description="imFORZA &lt;https://github.com/imforza&gt;"/>
+      </docblock>
+      <property static="true" visibility="private" namespace="" line="40" package="WP-API-Libraries\WP-Google-PageSpeed-API">
+        <name>$api_key</name>
+        <full_name>\GooglePageSpeedAPI::api_key</full_name>
+        <default></default>
+        <docblock line="40">
+          <description>API Key.</description>
+          <long-description></long-description>
+          <tag name="var" line="40" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="" line="47" package="WP-API-Libraries\WP-Google-PageSpeed-API">
+        <name>$base_uri</name>
+        <full_name>\GooglePageSpeedAPI::base_uri</full_name>
+        <default>'https://www.googleapis.com/pagespeedonline/v2/runPagespeed'</default>
+        <docblock line="47">
+          <description>URL to the API.</description>
+          <long-description></long-description>
+          <tag name="var" line="47" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="56" package="WP-API-Libraries\WP-Google-PageSpeed-API">
+        <name>__construct</name>
+        <full_name>\GooglePageSpeedAPI::__construct()</full_name>
+        <docblock line="56">
+          <description>__construct function.</description>
+          <long-description></long-description>
+          <tag name="access" line="56" description="public"/>
+          <tag name="param" line="56" description="&lt;p&gt;API Key.&lt;/p&gt;" type="mixed" variable="$api_key">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="56" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$api_key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="" line="67" package="WP-API-Libraries\WP-Google-PageSpeed-API">
+        <name>fetch</name>
+        <full_name>\GooglePageSpeedAPI::fetch()</full_name>
+        <docblock line="67">
+          <description>Fetch the request from the API.</description>
+          <long-description></long-description>
+          <tag name="access" line="67" description="private"/>
+          <tag name="param" line="67" description="&lt;p&gt;Request URL.&lt;/p&gt;" type="mixed" variable="$request">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="67" description="Body." type="\$body">
+            <type>\$body</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$request</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="97" package="WP-API-Libraries\WP-Google-PageSpeed-API">
+        <name>run_pagespeed</name>
+        <full_name>\GooglePageSpeedAPI::run_pagespeed()</full_name>
+        <docblock line="97">
+          <description>Runs PageSpeed analysis on the page at the specified URL, and returns PageSpeed scores, a list of suggestions to
+make that page faster, and other information.</description>
+          <long-description></long-description>
+          <tag name="api" line="97" description="GET"/>
+          <tag name="see" line="97" description="Documentation" link="https://developers.google.com/speed/docs/insights/v2/reference/pagespeedapi/runpagespeed"/>
+          <tag name="access" line="97" description="public"/>
+          <tag name="param" line="97" description="&lt;p&gt;The URL to fetch and analyze.&lt;/p&gt;" type="string" variable="$url">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="97" description="&lt;p&gt;Indicates if third party resources should be filtered out before PageSpeed&#10;analysis. (Default: false).&lt;/p&gt;" type="boolean" variable="$filter_third_party">
+            <type>boolean</type>
+          </tag>
+          <tag name="param" line="97" description="&lt;p&gt;The locale used to localize formatted results.&lt;/p&gt;" type="string" variable="$locale">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="97" description="&lt;p&gt;A PageSpeed rule to run; if none are given, all rules are run.&lt;/p&gt;" type="string" variable="$rule">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="97" description="&lt;p&gt;Indicates if binary data containing a screenshot should be included (Default: false).&lt;/p&gt;" type="boolean" variable="$screenshot">
+            <type>boolean</type>
+          </tag>
+          <tag name="param" line="97" description="&lt;p&gt;The analysis strategy to use. Accepted values: desktop, mobile.&lt;/p&gt;" type="string" variable="$strategy">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="97" description="PageSpeed Results." type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$url</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$filter_third_party</name>
+          <default>''</default>
+          <type>boolean</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$locale</name>
+          <default>''</default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$rule</name>
+          <default>''</default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$screenshot</name>
+          <default>''</default>
+          <type>boolean</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$strategy</name>
+          <default>''</default>
+          <type>string</type>
+        </argument>
+      </method>
+    </class>
+    <source>eJytVtuO2zYQfZa/YgJsYWexlrd59GbTdZorGrSGkzRALxBoibbZlUSFpLxxiv33Hl4ky7ckCOoAWXE4c2bmzHDIxz9Vq6o3Oj/v0Tl9mNJLKZc5pylb8rcV5xlNpq+xZXdvKpbeQg61IaTDN2KumBJc/wWBtxu2dkNvN+oBu3dO07xeipJ+ZQUfn3TTqr2fvR7TyphKj0ejpTCreh6nshjdVUNWiWHeOLaCpXdcAUk7x9AA0jOuUyUqI2Q5pilXC6kK64QU/1hzbTQZ2Y2CfBhw/kGqbKq41jFgJrVZSeVCtsZtytj6nSvt0H+ML+PLVnc3+P2IXRrQfSnMq3r+P+YbAJ8qVqarMRVMG656nn96/kkYEgtiaYq8kGYmFE9NvrEFgnxADyjjC1HybED9ydO308m7V316iH//EofxFd07oJ9XPL21SGnOtLZbYDLuoDh54uWA8gS3VQaFAbXXi2zPRWiryZZxx7HPdkOoGNValEsyK360YWJr7zBuclHetgxmfM1zWaE+sWfLkenYGmUy1SNRarFcGT1aPxopvuCKlykf0TOZ1gUvDbNd43E151+u5WFnRN91VJwV8x0kihe/zf6Y0OMjLSEK8PKZPbEGo17k63BIs2M4IsdxRJZlyH7hm9gvg/BmzRRpo0CylwAx0jb/lCol1sxwOkPOyS3fXO0Bvp+9sUfI1saX4mu4LeCcaZ7UStA19Vtu7+5CreDOM9t2uCxRXe5qVZfTRtp3AYV4zilJUlnCZZ0aWtRlakvoggr7N773qarnuUiDrGKKFVSIT+inJs8dpqCjuKlVSWspMidxqTiQ1k/X+WALZNs8avgcj1v5dYfTKLrf4/UFN+nK0RomFS2ULE7w3CTlqW2kO2k1KLPwF3WLG8WQ29lcZht6iv/iw3K1SS5sYIMtoD/FUQSBrpA+R2J3VaJ4IQ1Pltx0da+cZiqzXS0EgFOxth8eI7EqzjBgBksX4TX9o2WZZNwrHYGxajvW1t4CuPH06PKSHlyDfhdHKE8USCj5HU5r8lwpqTC5Goght4L+BWkQUprFAMXG9lsUtdZj+iHDVt/wT2aYyYKJEvPtonFwEZj1ObhCR13KXWj3O208q0vdGXKsZPlGC03g33aAPRPEjPvGKUjFQkALJb2AakYevAugU4lMsIuxijrIBel6iRNkK2qvQO+1YLccmAB2Dhbu8vCQEq4wkUp7f7LDQ1UJevn8XVh1h+V3zuD20APZHvd2vT+cv3Km/fAhOqtVTnu/dyAvTC/X0y5Px/RnHu+gzKXEQEK1FiIHI4lZCZUl2DMbel1mIsUB0fY6dBvkN8C3rBUCI72SdZ7RHIw6e2Qha4M1yOxcZd7lN/yabohp8IwvWJ2bMWqVa/4wPp58LlOGSzPazT1Ia/sQAAduKT5z8iU23PaRBrg+gapqWO/+Jp2Wc9vARfWuLDelLNGzSHgp1rxEV+W509FOCK0TnOP9xnkJDk2TwA7lc1HaV0LGDCNMX4OzZ8Nj1LHbFkCUaV5niO4bmcMHHC03e23Tnsd2H4mCyJgmaMXKcrdmOUbeGO8pfWtkdUGFnIuc710nTCm2oaO/LZOzbhmO3TsgL2lPyMA1+8XRZsVNiznV9ENYuUKF7w5pjaTJ0K7bYe/mKC8qs/HuwmvuS3P0Y43HZjbEpMozDWQ3P2dBTF7sWsHBxofzdGd+njG11H/2cXn2/ybEtn+7XnWUEJ9XspFeteEjHXcLHOGpySUAHGok7ekOyIcqIdh9b4H7PQ9eGrD84oS9q9aetZUFW/t5wrJT2z377U5A2QpOYTVdsY8U5A1OWHYL17wFrollWYJvtUlgbB9MgEDHgUM9fNK+DsPN3VyYfvfgEdLeofe9+95/HdqBAw==</source>
+  </file>
+  <package name="WP-API-Libraries" full_name="WP-API-Libraries">
+    <package name="WP-Google-PageSpeed-API" full_name="WP-API-Libraries\WP-Google-PageSpeed-API"/>
+  </package>
+  <package name="global" full_name="global"/>
+  <namespace name="global" full_name="global"/>
+  <deprecated count="0"/>
+</project>

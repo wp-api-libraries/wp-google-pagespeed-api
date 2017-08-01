@@ -2,7 +2,7 @@
 <phpdoc>
     <title>WP Google PageSpeed API</title>
     <parser>
-        <target>dist</target>
+        <target>docs</target>
         <encoding>utf8</encoding>
         <markers>
             <item>TODO</item>
@@ -11,10 +11,10 @@
         <visibility></visibility>
     </parser>
     <transformer>
-        <target>dist</target>
+        <target>docs</target>
     </transformer>
     <transformations>
-        <template name="responsive-twig" />
+        <template name="responsive" />
     </transformations>
     <files>
 				<directory>.</directory>
